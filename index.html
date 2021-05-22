@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem facilis ipsum impedit tenetur accusantium voluptas labore quibusdam nam eveniet incidunt, assumenda magnam asperiores, reiciendis ullam enim culpa numquam ducimus quisquam quidem quod
+        recusandae aperiam quia. Atque excepturi voluptatibus rerum omnis aspernatur incidunt aliquam, dolore, adipisci ex aut esse delectus necessitatibus illo? Dignissimos libero repellendus quos nihil incidunt distinctio cumque eaque temporibus porro
+        iure consequatur, amet excepturi laboriosam eos ut recusandae qui, commodi suscipit, consequuntur placeat modi</p>
+    <p></p>
+    <script type="text/javascript">
+        function kaynak_belirtme() { 
+            var body = document.getElementsByTagName('body')[0]; 
+            var secilen_yazi; 
+            secilen_yazi = window.getSelection(); 
+            var kaynak = " Kaynak: www.siteadresi.com"; 
+            var yazilacak_metin = secilen_yazi + kaynak; 
+            var kutu = document.createElement('div'); 
+            body.appendChild(kutu); 
+            kutu.innerHTML = yazilacak_metin; 
+            secilen_yazi.selectAllChildren(kutu); 
+            window.setTimeout(function() {  
+                body.removeChild(kutu); 
+            }, 0);
+        }
+        document.oncopy = kaynak_belirtme;
+    </script>
+</body>
+
+</html>
